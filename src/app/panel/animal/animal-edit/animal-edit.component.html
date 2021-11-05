@@ -1,0 +1,93 @@
+<div class="page-header has-tab">
+    <h2 class="font-weight-normal">Conferência de Animais</h2>
+</div>
+
+<nz-tabset class="page-header-tab">
+    <nz-tab nzTitle="Informações do gado">
+        <nz-card>
+            <nz-input-group>
+<!--                <nz-divider nzText="Informações para Sensores" class="m-t-20" nzOrientation="left"></nz-divider>-->
+                <div [nzGutter]="8" nz-row>
+                    <div nz-col nzSpan="3">
+                        <label>ID</label>
+                        <input disabled type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="3">
+                        <label>RFID</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="3">
+                        <label>UHF</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="3">
+                        <label>Sisbov ID</label>
+                        <input type="text" nz-input/>
+                    </div>
+
+
+                </div>
+                <div [nzGutter]="8" nz-row>
+                    <div nz-col nzSpan="4">
+                        <label>Data de Nascimento</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="4">
+                        <label>Linhagem</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <label>Sexo</label>
+                        <nz-select style="width: 100%;" type="text" nz-input >
+                            <nz-option [nzLabel]="'Macho'" [nzValue]="'Macho'"></nz-option>
+                            <nz-option [nzLabel]="'Fêmea'" [nzValue]="'Fêmea'"></nz-option>
+                        </nz-select>
+                    </div>
+                </div>
+                <div [nzGutter]="8" nz-row>
+                    <div nz-col nzSpan="6">
+                        <label>Tipo do Chifre</label>
+                        <nz-select style="width: 100%;" type="text" nz-input >
+                            <nz-option [nzLabel]="'Curvo'" [nzValue]="'Curvo'"></nz-option>
+                            <nz-option [nzLabel]="'Reto'" [nzValue]="'Reto'"></nz-option>
+                        </nz-select>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <label>Categoria</label>
+                        <nz-select style="width: 100%;" type="text" nz-input >
+                            <nz-option [nzLabel]="'Gado de Leite'" [nzValue]="'Gado de Leite'"></nz-option>
+                        </nz-select>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <label>Pelagem</label>
+                        <nz-select style="width: 100%;" type="text" nz-input >
+                            <nz-option [nzLabel]="'Preto'" [nzValue]="'Preto'"></nz-option>
+                            <nz-option [nzLabel]="'Branco'" [nzValue]="'Branco'"></nz-option>
+                        </nz-select>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <label>Raça</label>
+                        <nz-select style="width: 100%;" type="text" nz-input >
+                            <nz-option [nzLabel]="'Nelore'" [nzValue]="'Nelore'"></nz-option>
+                        </nz-select>
+                    </div>
+
+                </div>
+                <div class="footer-buttons">
+                    <div nz-row>
+                        <button nz-button nzSize="small" nzType="default">
+                            <i nz-icon nzType="left"></i>
+                            Voltar
+                        </button>
+                        <button class="m-l-5" nz-button nzSize="small" nzDanger nzType="primary">
+                            <i nz-icon nzType="check"></i>
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+            </nz-input-group>
+        </nz-card>
+    </nz-tab>
+    <!--    <nz-tab nzTitle="Usuário Vinculado">-->
+    <!--    </nz-tab>-->
+</nz-tabset>

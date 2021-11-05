@@ -1,0 +1,69 @@
+<div class="page-header has-tab">
+    <h2 class="font-weight-normal">Nova Fazenda</h2>
+</div>
+
+<nz-tabset class="page-header-tab">
+    <nz-tab nzTitle="Informações da Fazenda">
+        <nz-card>
+            <nz-input-group>
+                <div [nzGutter]="8" nz-row>
+                    <div nz-col nzSpan="4">
+                        <label>ID</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="10">
+                        <label>Razão Social</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="10">
+                        <label>Nome Fantasia</label>
+                        <input type="text" nz-input/>
+                    </div>
+                </div>
+                <div [nzGutter]="8" nz-row>
+                    <div nz-col nzSpan="4">
+                        <label>Coordenadas</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="4">
+                        <label>CCIR</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="4">
+                        <label>SRID</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="12">
+                        <label>Certificado Incra</label>
+                        <input type="text" nz-input/>
+                    </div>
+                </div>
+                <div class="footer-buttons">
+                    <div nz-row>
+                        <button nz-button nzSize="small" nzType="default">
+                            <i nz-icon nzType="left"></i>
+                            Voltar
+                        </button>
+                        <button class="m-l-5" nz-button nzSize="small" nzDanger nzType="primary">
+                            <i nz-icon nzType="check"></i>
+                            Salvar
+                        </button>
+                    </div>
+                    <div>
+                        <label class="m-r-15">Ativo</label>
+                        <nz-switch [ngModel]="true"></nz-switch>
+                    </div>
+                </div>
+
+
+            </nz-input-group>
+        </nz-card>
+
+    </nz-tab>
+    <nz-tab nzTitle="Grupos de Permissão">
+    </nz-tab>
+
+    <!--    <nz-tab nzTitle="Funcionários Vinculados">-->
+
+    <!--    </nz-tab>-->
+</nz-tabset>

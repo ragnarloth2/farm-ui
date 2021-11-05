@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 
 
 @Component({
-    templateUrl: './login-1.component.html'
+    templateUrl: './login.component.html'
 })
 
-export class Login1Component {
+export class LoginComponent {
     loginForm: FormGroup;
 
     submitForm(): void {

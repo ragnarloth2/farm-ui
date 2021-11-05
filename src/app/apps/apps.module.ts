@@ -41,6 +41,7 @@ import { ProjectDetailsComponent } from './projects/project-details/project-deta
 import { OrdersListComponent } from './e-commerce/orders-list/orders-list.component';
 import { ProductsListComponent } from './e-commerce/products-list/products-list.component';
 import { ProductComponent } from './e-commerce/product/product.component';
+import { CustomExpanderComponent } from './components/custom-expander/custom-expander.component';
 
 const antdModule = [
     NzButtonModule,
@@ -85,7 +86,11 @@ const antdModule = [
         ProjectDetailsComponent,
         OrdersListComponent,
         ProductsListComponent,
-        ProductComponent
+        ProductComponent,
+        CustomExpanderComponent
+    ],
+    exports: [
+        CustomExpanderComponent
     ],
     providers: [
         ThemeConstantService,

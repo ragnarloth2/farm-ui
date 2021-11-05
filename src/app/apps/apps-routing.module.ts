@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from '../authentication/login/login.component';
 
 import { ChatComponent } from './chat/chat.component';
 import { FileManagerComponent } from './file-manager/file-manager.component';
@@ -9,7 +10,8 @@ import { ProjectDetailsComponent } from './projects/project-details/project-deta
 import { OrdersListComponent } from './e-commerce/orders-list/orders-list.component';
 import { ProductsListComponent } from './e-commerce/products-list/products-list.component';
 import { ProductComponent } from './e-commerce/product/product.component';
-import { NfeEntryComponent } from "./nfe-entry/nfe-entry.component";
+import { NfeEntryComponent } from './nfe-entry/nfe-entry.component';
+
 
 const routes: Routes = [
     {
@@ -17,7 +19,7 @@ const routes: Routes = [
         component: ChatComponent,
         data: {
             title: 'Chat',
-            headerDisplay: "none"
+            headerDisplay: 'none'
         }
     },
     {
@@ -25,7 +27,7 @@ const routes: Routes = [
         component: FileManagerComponent,
         data: {
             title: 'File Manager',
-            headerDisplay: "none"
+            headerDisplay: 'none'
         }
     },
     {
@@ -33,7 +35,7 @@ const routes: Routes = [
         component: MailComponent,
         data: {
             title: 'Mail',
-            headerDisplay: "none"
+            headerDisplay: 'none'
         }
     },
     {
@@ -44,7 +46,7 @@ const routes: Routes = [
                 component: ProjectListComponent,
                 data: {
                     title: 'Project List',
-                    headerDisplay: "none"
+                    headerDisplay: 'none'
                 }
             },
             {
@@ -52,7 +54,7 @@ const routes: Routes = [
                 component: ProjectDetailsComponent,
                 data: {
                     title: 'Project Details',
-                    headerDisplay: "none"
+                    headerDisplay: 'none'
                 }
             }
         ]
@@ -80,7 +82,7 @@ const routes: Routes = [
                 component: ProductComponent,
                 data: {
                     title: 'Product',
-                    headerDisplay: "none"
+                    headerDisplay: 'none'
                 }
             },
             {
@@ -88,7 +90,7 @@ const routes: Routes = [
                 component: NfeEntryComponent,
                 data: {
                     title: 'Entrada de Nota Fiscal',
-                    headerDisplay: "none"
+                    headerDisplay: 'none'
                 }
             },
             {

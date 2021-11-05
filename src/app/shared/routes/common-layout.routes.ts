@@ -1,15 +1,15 @@
 import {Routes} from '@angular/router';
-import {ComponentsComponent} from '../../components/components.component'
+import {ComponentsComponent} from '../../components/components.component';
 
 export const CommonLayout_ROUTES: Routes = [
 
-    //Dashboard
+    // Dashboard
     {
         path: 'dashboard',
         loadChildren: () => import('../../dashboard/dashboard.module').then(m => m.DashboardModule),
     },
 
-    //Apps
+    // Apps
     {
         path: 'apps',
         data: {
@@ -28,7 +28,7 @@ export const CommonLayout_ROUTES: Routes = [
         ]
     },
 
-    //Component
+    // Component
     {
         path: 'demo',
         component: ComponentsComponent,
@@ -67,7 +67,7 @@ export const CommonLayout_ROUTES: Routes = [
         ]
     },
 
-    //Pages
+    // Pages
     {
         path: 'pages',
         data: {
@@ -84,5 +84,14 @@ export const CommonLayout_ROUTES: Routes = [
                 loadChildren: () => import('../../pages/pages.module').then(m => m.PagesModule)
             },
         ]
+    },
+
+    {
+        path: 'panel',
+        data: {
+            title: 'Nota Fiscal',
+            headerDisplay: 'none'
+        },
+        loadChildren: () => import('../../panel/panel.module').then(m => m.PanelModule)
     }
 ];

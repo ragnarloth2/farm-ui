@@ -1,0 +1,138 @@
+<div class="page-header has-tab">
+    <h2 class="font-weight-normal">Conferência de Funcionário</h2>
+</div>
+
+<nz-tabset class="page-header-tab">
+    <nz-tab nzTitle="Informações Pessoais">
+<!--        <nz-card nzBorderless>-->
+            <nz-input-group>
+                <nz-card nzType="inner" nzTitle="Documentação">
+                    <div [nzGutter]="8" nz-row>
+                        <div nz-col nzSpan="4">
+                            <label>CPF</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="14">
+                            <label>Nome</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="6">
+                            <label>Nacionalidade</label>
+                            <nz-select style="width: 100%;" type="text" nz-input>
+                                <nz-option [nzLabel]="'Brasil'" [nzValue]="'Brasil'"></nz-option>
+                                <nz-option [nzLabel]="'Afeganistão'" [nzValue]="'Afeganistão'"></nz-option>
+                            </nz-select>
+                        </div>
+                    </div>
+                    <div [nzGutter]="8" nz-row>
+                        <div nz-col nzSpan="4">
+                            <label>RG</label>
+                            <input type="text" nz-input/>
+                        </div>
+                    </div>
+                </nz-card>
+                <nz-card nzType="inner" nzTitle="Informações de Endereço">
+                    <div [nzGutter]="8" nz-row>
+                        <div nz-col nzSpan="5">
+                            <label>CEP</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="8">
+                            <label>Bairro</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="11">
+                            <label>Logradouro</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="6">
+                            <label>Complemento</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <label>Estado</label>
+                            <nz-select style="width: 100%;" type="text" nz-input>
+                                <nz-option [nzLabel]="'São Paulo'" [nzValue]="'Brasil'"></nz-option>
+                                <nz-option [nzLabel]="'Minas Gerais'" [nzValue]="'Afeganistão'"></nz-option>
+                            </nz-select>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <label>Cidade</label>
+                            <nz-select style="width: 100%;" type="text" nz-input>
+                                <nz-option [nzLabel]="'Uberlândia'" [nzValue]="'Brasil'"></nz-option>
+                            </nz-select>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <label>Numero</label>
+                            <input type="text" nz-input/>
+                        </div>
+
+                    </div>
+                </nz-card>
+                <nz-card nzType="inner" nzTitle="Contato">
+                    <div [nzGutter]="8" nz-row>
+                        <div nz-col nzSpan="4">
+                            <label>Tipo de Contato</label>
+                            <nz-select style="width: 100%;" type="text" nz-input>
+                                <nz-option [nzLabel]="'Celular'" [nzValue]="'Celular'"></nz-option>
+                                <nz-option [nzLabel]="'E-mail'" [nzValue]="'E-mail'"></nz-option>
+                            </nz-select>
+                        </div>
+
+                        <div nz-col nzSpan="5">
+                            <label>DDD</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="8">
+                            <label>Número</label>
+                            <input type="text" nz-input/>
+                        </div>
+                        <div nz-col>
+                            <br>
+                            <button class="m-l-5" nz-button nzSize="default" nzType="primary">+</button>
+                        </div>
+                    </div>
+                </nz-card>
+                <nz-card nzType="inner" nzTitle="Informações Profissionais">
+                    <div [nzGutter]="8" nz-row>
+                        <div nz-col nzSpan="3">
+                            <label>Salário</label>
+                            <input type="text" nz-input/>
+                        </div>
+
+                        <div nz-col nzSpan="7">
+                            <label>Data de Admissão</label>
+                            <input disabled type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="7">
+                            <label>Data de Demissão</label>
+                            <input disabled type="text" nz-input/>
+                        </div>
+                        <div nz-col nzSpan="7">
+                            <label>Data de Pagamento</label>
+                            <input type="text" nz-input/>
+                        </div>
+                    </div>
+
+                </nz-card>
+                <div class="footer-buttons">
+                    <div nz-row>
+                        <button nz-button nzSize="small" nzType="default">
+                            <i nz-icon nzType="left"></i>
+                            Voltar
+                        </button>
+                        <button class="m-l-5" nz-button nzSize="small" nzDanger nzType="primary">
+                            <i nz-icon nzType="check"></i>
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+            </nz-input-group>
+<!--        </nz-card>-->
+
+    </nz-tab>
+    <nz-tab nzTitle="Permissionamento">
+    </nz-tab>
+    <!--    <nz-tab nzTitle="Usuário Vinculado">-->
+    <!--    </nz-tab>-->
+</nz-tabset>

@@ -1,0 +1,60 @@
+<div class="page-header has-tab">
+    <h2 class="font-weight-normal">Fazendas</h2>
+</div>
+
+<nz-tabset class="page-header-tab">
+    <nz-tab nzTitle="Conferência">
+        <nz-card>
+            <!--            <nz-upload nzListType="picture" [(nzFileList)]="fileList">-->
+            <!--                <button nz-button><i nz-icon nzType="upload"></i>Enviar Nota Fiscal</button>-->
+            <!--            </nz-upload>-->
+            <nz-input-group>
+                <div nz-row [nzGutter]="8">
+                    <div nz-col nzSpan="2">
+                        <label>ID</label>
+                        <input type="text" nz-input />
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <label>Nome</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="5">
+                        <label>Região</label>
+                        <nz-select style="width: 100%;" type="text" nz-input >
+                            <nz-option [nzLabel]="'Martins'" [nzValue]="'Martins'"></nz-option>
+                        </nz-select>
+                    </div>
+                    <div class="ant-col-lg-3 ant-col-md-5">
+                        <label>CNPJ</label>
+                        <input type="text" nz-input/>
+                    </div>
+
+                </div>
+                <nz-divider nzText="Listagem de Fazendas" class="m-t-20" nzOrientation="center"></nz-divider>
+            </nz-input-group>
+
+            <nz-table #nzTable [nzData]="listOfData" nzTableLayout="fixed">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Região</th>
+                    <th>CNPJ</th>
+                    <th>Ativo</th>
+                </tr>
+                </thead>
+                <tbody>
+                <ng-container *ngFor="let data of nzTable.data">
+                    <tr>
+                        <td>{{ data.id }}</td>
+                        <td>{{ data.name }}</td>
+                        <td>{{ data.region }}</td>
+                        <td>{{ data.cnpj }}</td>
+                        <td><label nz-checkbox nzDisabled [ngModel]="data.active"></label></td>
+                    </tr>
+                </ng-container>
+                </tbody>
+            </nz-table>
+        </nz-card>
+    </nz-tab>
+</nz-tabset>

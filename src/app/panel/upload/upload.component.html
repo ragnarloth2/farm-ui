@@ -1,0 +1,70 @@
+<div class="page-header has-tab">
+    <h2 class="font-weight-normal">Notas Fiscais</h2>
+</div>
+
+<nz-tabset class="page-header-tab">
+    <nz-tab nzTitle="Conferência">
+        <nz-card>
+<!--            <nz-upload nzListType="picture" [(nzFileList)]="fileList">-->
+<!--                <button nz-button><i nz-icon nzType="upload"></i>Enviar Nota Fiscal</button>-->
+<!--            </nz-upload>-->
+            <nz-input-group>
+                <div nz-row [nzGutter]="8">
+                    <div nz-col nzSpan="3">
+                        <label>Serie</label>
+                        <input type="text" nz-input placeholder="Serie" />
+                    </div>
+                    <div nz-col nzSpan="4">
+                        <label>Numero</label>
+                        <input type="text" nz-input/>
+                    </div>
+                    <div nz-col nzSpan="5">
+                        <label>Fornecedor</label>
+                        <nz-select style="width: 100%;" type="text" nz-input >
+                            <nz-option [nzLabel]="'Martins'" [nzValue]="'Martins'"></nz-option>
+                        </nz-select>
+                    </div>
+                </div>
+
+                <div class="upload-right">
+                    <button nz-button nzType="primary" class="m-t-5">Aplicar Filtros</button>
+                    <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/">
+                        <button style="float: right" nz-button nzType="default" nzBlock>
+                            <i nz-icon nzType="file-add" theme="outline"></i>
+                            <span class="m-l-5">Enviar Nota Fiscal</span>
+                        </button>
+                    </nz-upload>
+                </div>
+                <nz-divider nzText="Listagem de Nota Fiscal" class="m-t-20" nzOrientation="center"></nz-divider>
+            </nz-input-group>
+
+            <nz-table #nzTable [nzData]="listOfData" nzTableLayout="fixed">
+                <thead>
+                <tr>
+                    <th nzWidth="60px"></th>
+                    <th>Numero</th>
+                    <th>Serie</th>
+                    <th>Data de Importação</th>
+                    <th>Fornecedor</th>
+                    <th>Valor da NF</th>
+                </tr>
+                </thead>
+                <tbody>
+                <ng-container *ngFor="let data of nzTable.data">
+                    <tr>
+                        <td [nzExpand]="expandSet.has(data.key)" (nzExpandChange)="onExpandChange(data.key, $event)"></td>
+                        <td>{{ data.number }}</td>
+                        <td>{{ data.serie }}</td>
+                        <td>{{ data.importationDate }}</td>
+                        <td>Martins</td>
+                        <td>{{ data.totalPrice }}</td>
+                    </tr>
+                    <tr  [nzExpand]="expandSet.has(data.key)">
+                        <span class="display-block">1 - Memória RAM</span>
+                    </tr>
+                </ng-container>
+                </tbody>
+            </nz-table>
+        </nz-card>
+    </nz-tab>
+</nz-tabset>
